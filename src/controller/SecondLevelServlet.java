@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import utility.StringBoolean;
 
+
 @WebServlet(urlPatterns = { "/secondlevel" })
 public class SecondLevelServlet extends HttpServlet {
 
@@ -39,6 +40,7 @@ public class SecondLevelServlet extends HttpServlet {
 				boolean output = stringboolean.contains(input1, input2);
 				System.out.println(output);
 				request.setAttribute("output", output);
+				// System.out.println(output);
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level2.jsp");
 				rd.forward(request, response);
 			}
